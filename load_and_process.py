@@ -19,6 +19,7 @@ def load_fer2013():
         faces = np.asarray(faces)
         faces = np.expand_dims(faces, -1)
         emotions = pd.get_dummies(data['emotion']).as_matrix()
+        print(emotions.shape)
         return faces, emotions
 
 def preprocess_input(x, v2=True):
